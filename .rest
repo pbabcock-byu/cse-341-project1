@@ -1,0 +1,21 @@
+# Localhost route to get all contact
+GET http://localhost:3000/users
+Content-Type: application/json
+
+###
+
+# Localhost route to get a single contact by ID
+GET http://localhost:3000/users/66ee45fef639c21e6a69b2ba
+Content-Type: application/json
+
+
+
+# Published route to get all Contacts
+GET https://your-deployed-api.com/users
+Content-Type: application/json
+
+###
+
+# Published route to get a single Contact by ID
+GET https://cse-341-project1-6n2t.onrender.com/users/66ee4678f639c21e6a69b2bb
+Content-Type: application/json
