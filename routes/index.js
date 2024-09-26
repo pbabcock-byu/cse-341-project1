@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 
 
@@ -6,6 +7,7 @@ router.get('/', (req, res) => {
   });
 
 
+// here it see the url /uses and so that will look for the required which is users.js  
 router.use('/users', require('./users'));
 
 

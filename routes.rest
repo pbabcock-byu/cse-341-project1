@@ -1,0 +1,55 @@
+# Localhost route to get all contact
+GET http://localhost:3000/users
+Content-Type: application/json
+
+###
+
+# Localhost route to get a single contact by ID
+GET http://localhost:3000/users/66ee45fef639c21e6a69b2ba
+Content-Type: application/json
+###
+
+# Localhost route to create contact
+POST http://localhost:3000/users HTTP/1.1
+Content-Type: application/json
+
+  {
+  "firstname": "Fred",
+  "lastName": "Babcock",
+  "email": "fred@saefl.com",
+  "favoriteColor": "Black", 
+  "birthday": "01/01/1970"
+  }
+###
+
+
+# Localhost route to UPDATE a contact
+PUT http://localhost:3000/users/66f24e22c2e2e6ea13878368
+Content-Type: application/json
+
+{
+  "firstname": "Fredupdated",
+  "lastName": "Babcock",
+  "email": "fred1@saefl.com",
+  "favoriteColor": "Black", 
+  "birthday": "01/01/1970"
+}
+###
+
+# Localhost route to DELETE a contact
+DELETE http://localhost:3000/users/66f24e22c2e2e6ea13878368 HTTP/1.1
+
+###
+
+
+
+# Published route to get all Contacts
+GET https://your-deployed-api.com/users
+Content-Type: application/json
+
+###
+
+# Published route to get a single Contact by ID
+GET https://cse-341-project1-6n2t.onrender.com/users/66ee4678f639c21e6a69b2bb
+Content-Type: application/json
+###
