@@ -5,6 +5,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 // using async because we are calling a database
 const getAll = async (reg, res) => {
+    //#swagger.tags=['contacts']
     // i could have put db('project1'), the database, but i want but i put project1 in the connection string 
     // because nothing is in find() we will get all
     const result = await mongodb.getDatabase().db().collection('contacts').find(); 
@@ -16,6 +17,7 @@ const getAll = async (reg, res) => {
 
 const getSingle = async (reg, res) => {
     const userId = new ObjectId(reg.params.id);
+    //#swagger.tags=['contacts']
     // i could have put db('project1'), the database, but i want but i put project1 in the connection string  
     // find({_id: userId}) http://localhost:3000/users/66ee5a600e5826bf034681b0 = will load the data for that id
     const result = await mongodb.getDatabase().db().collection('contacts').find({_id: userId}); 
@@ -28,6 +30,7 @@ const getSingle = async (reg, res) => {
 
 
 const createUser = async (reg, res) => {
+    //#swagger.tags=['contacts']
     // Does not have a user ID yet
     const user = {
         firstname: reg.body.firstname,
@@ -48,6 +51,7 @@ const createUser = async (reg, res) => {
 
 
 const updateUser = async (reg, res) => {
+    //#swagger.tags=['contacts']
     // as we update a user we need to get the ID
     const userId = new ObjectId(reg.params.id);
     const user = {
@@ -68,6 +72,7 @@ const updateUser = async (reg, res) => {
 };
 
 const deleteUser = async (reg, res) => {
+    //#swagger.tags=['contacts']
     // as we update a user we need to get the ID
     const userId = new ObjectId(reg.params.id);
     // This uses the user ID to remove this record
